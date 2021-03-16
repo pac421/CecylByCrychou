@@ -85,7 +85,22 @@ class __TwigTemplate_82e157f49b390d0ee6683800bfe6343a4f7ea865f022e3434a38db7e5dc
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
 
         // line 6
-        echo "
+        echo "    <div class=\"container-md\">
+        <h1 class=\"h1 my-5\">Contact</h1>
+        <div class=\"mb-3\">
+            <label for=\"name\" class=\"form-label\">Nom</label>
+            <input type=\"text\" class=\"form-control\" id=\"name\">
+        </div>
+        <div class=\"mb-3\">
+            <label for=\"email\" class=\"form-label\">Email</label>
+            <input type=\"email\" class=\"form-control\" id=\"email\">
+        </div>
+        <div class=\"mb-3\">
+            <label for=\"message\" class=\"form-label\">Message</label>
+            <textarea class=\"form-control\" id=\"message\" rows=\"7\"></textarea>
+        </div>
+        <button type=\"button\" class=\"btn btn-warning text-white\">Envoyer</button>
+    </div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -117,7 +132,22 @@ class __TwigTemplate_82e157f49b390d0ee6683800bfe6343a4f7ea865f022e3434a38db7e5dc
 {% block title %}Contact | Crychou{% endblock %}
 
 {% block content %}
-
+    <div class=\"container-md\">
+        <h1 class=\"h1 my-5\">Contact</h1>
+        <div class=\"mb-3\">
+            <label for=\"name\" class=\"form-label\">Nom</label>
+            <input type=\"text\" class=\"form-control\" id=\"name\">
+        </div>
+        <div class=\"mb-3\">
+            <label for=\"email\" class=\"form-label\">Email</label>
+            <input type=\"email\" class=\"form-control\" id=\"email\">
+        </div>
+        <div class=\"mb-3\">
+            <label for=\"message\" class=\"form-label\">Message</label>
+            <textarea class=\"form-control\" id=\"message\" rows=\"7\"></textarea>
+        </div>
+        <button type=\"button\" class=\"btn btn-warning text-white\">Envoyer</button>
+    </div>
 {% endblock %}", "contact.html.twig", "/srv/http/CecylByCrychou/cecyl_by_crychou/templates/contact.html.twig");
     }
 }

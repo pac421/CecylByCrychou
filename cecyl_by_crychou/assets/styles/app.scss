@@ -3,7 +3,8 @@ $orange: #ff8c00;
 $warning: $orange;
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/hover.css/css/hover-min.css";
 
-body {
-
+.hvr-underline-reveal::before {
+  background: orange;
 }

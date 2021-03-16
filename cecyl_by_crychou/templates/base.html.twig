@@ -28,30 +28,43 @@
             <ul class="nav justify-content-center p-5">
                 <li class="nav-item me-auto">
                     <a class="nav-link" href="{{ path('show_home') }}">
-                        <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24">
+                        <img src="#" alt="logo" height="102">
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-uppercase {{ app.request.get('_route') == 'show_home' ? 'text-warning' : 'text-dark' }}" href="{{ path('show_home') }}"><i class="far fa-user me-2"></i>Artiste</a>
+                    <a class="nav-link text-uppercase hvr-underline-reveal {{ app.request.get('_route') == 'show_home' ? 'text-warning' : 'text-dark' }}" href="{{ path('show_home') }}"><i class="far fa-user me-2"></i>Artiste</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-uppercase {{ app.request.get('_route') == 'show_gallery' ? 'text-warning' : 'text-dark' }}" href="{{ path('show_gallery') }}"><i class="far fa-images me-2"></i>Galerie</a>
+                    <a class="nav-link text-uppercase hvr-underline-reveal {{ app.request.get('_route') == 'show_gallery' ? 'text-warning' : 'text-dark' }}" href="{{ path('show_gallery') }}"><i class="far fa-images me-2"></i>Galerie</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-uppercase text-dark" href="#"><i class="fas fa-shopping-cart me-2"></i>Boutique</a>
+                    <a class="nav-link text-uppercase hvr-underline-reveal text-dark" href="#"><i class="fas fa-shopping-cart me-2"></i>Boutique</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-uppercase text-dark" href="#"><i class="fab fa-instagram me-2"></i>Instagram</a>
+                    <a class="nav-link text-uppercase hvr-underline-reveal text-dark" href="#"><i class="fab fa-instagram me-2"></i>Instagram</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-uppercase {{ app.request.get('_route') == 'show_contact' ? 'text-warning' : 'text-dark' }}" href="{{ path('show_contact') }}"><i class="far fa-envelope me-2"></i>Contact</a>
+                    <a class="nav-link text-uppercase hvr-underline-reveal {{ app.request.get('_route') == 'show_contact' ? 'text-warning' : 'text-dark' }}" href="{{ path('show_contact') }}"><i class="far fa-envelope me-2"></i>Contact</a>
                 </li>
                 <li class="nav-item ms-auto">
-                    <a class="nav-link text-uppercase text-dark" href="#"><i class="fas fa-shopping-bag me-2"></i>Panier</a>
+                    <a class="nav-link text-uppercase hvr-underline-reveal text-dark" href="#"><i class="fas fa-shopping-bag me-2"></i>Panier</a>
                 </li>
             </ul>
             <!-- / navbar -->
             {% block content %}{% endblock %}
+            <!-- / footer -->
+            <ul class="nav justify-content-center fixed-bottom">
+                <li class="nav-item">
+                    <a class="nav-link text-secondary" href="#">Paiement</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-secondary" href="#">CecylByCrechou &#169; Tous droits réservés</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-secondary" href="#">Mentions légales</a>
+                </li>
+            </ul>
+            <!-- / footer -->
         {% endblock %}
     </body>
 </html>

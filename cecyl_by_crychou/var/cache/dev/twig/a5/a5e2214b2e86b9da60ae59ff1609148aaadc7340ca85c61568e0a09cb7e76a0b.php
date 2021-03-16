@@ -68,7 +68,7 @@ class __TwigTemplate_8a0eb94714a874e082f3eb166c1dd3188d0445386185c24a60503e0e8f2
         ";
         // line 26
         $this->displayBlock('body', $context, $blocks);
-        // line 56
+        // line 69
         echo "    </body>
 </html>
 ";
@@ -173,11 +173,11 @@ class __TwigTemplate_8a0eb94714a874e082f3eb166c1dd3188d0445386185c24a60503e0e8f2
         // line 30
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("show_home");
         echo "\">
-                        <img src=\"/docs/5.0/assets/brand/bootstrap-logo.svg\" alt=\"\" width=\"30\" height=\"24\">
+                        <img src=\"#\" alt=\"logo\" height=\"102\">
                     </a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link text-uppercase ";
+                    <a class=\"nav-link text-uppercase hvr-underline-reveal ";
         // line 35
         echo (((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 35, $this->source); })()), "request", [], "any", false, false, false, 35), "get", [0 => "_route"], "method", false, false, false, 35) == "show_home")) ? ("text-warning") : ("text-dark"));
         echo "\" href=\"";
@@ -185,7 +185,7 @@ class __TwigTemplate_8a0eb94714a874e082f3eb166c1dd3188d0445386185c24a60503e0e8f2
         echo "\"><i class=\"far fa-user me-2\"></i>Artiste</a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link text-uppercase ";
+                    <a class=\"nav-link text-uppercase hvr-underline-reveal ";
         // line 38
         echo (((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 38, $this->source); })()), "request", [], "any", false, false, false, 38), "get", [0 => "_route"], "method", false, false, false, 38) == "show_gallery")) ? ("text-warning") : ("text-dark"));
         echo "\" href=\"";
@@ -193,13 +193,13 @@ class __TwigTemplate_8a0eb94714a874e082f3eb166c1dd3188d0445386185c24a60503e0e8f2
         echo "\"><i class=\"far fa-images me-2\"></i>Galerie</a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link text-uppercase text-dark\" href=\"#\"><i class=\"fas fa-shopping-cart me-2\"></i>Boutique</a>
+                    <a class=\"nav-link text-uppercase hvr-underline-reveal text-dark\" href=\"#\"><i class=\"fas fa-shopping-cart me-2\"></i>Boutique</a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link text-uppercase text-dark\" href=\"#\"><i class=\"fab fa-instagram me-2\"></i>Instagram</a>
+                    <a class=\"nav-link text-uppercase hvr-underline-reveal text-dark\" href=\"#\"><i class=\"fab fa-instagram me-2\"></i>Instagram</a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link text-uppercase ";
+                    <a class=\"nav-link text-uppercase hvr-underline-reveal ";
         // line 47
         echo (((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 47, $this->source); })()), "request", [], "any", false, false, false, 47), "get", [0 => "_route"], "method", false, false, false, 47) == "show_contact")) ? ("text-warning") : ("text-dark"));
         echo "\" href=\"";
@@ -207,7 +207,7 @@ class __TwigTemplate_8a0eb94714a874e082f3eb166c1dd3188d0445386185c24a60503e0e8f2
         echo "\"><i class=\"far fa-envelope me-2\"></i>Contact</a>
                 </li>
                 <li class=\"nav-item ms-auto\">
-                    <a class=\"nav-link text-uppercase text-dark\" href=\"#\"><i class=\"fas fa-shopping-bag me-2\"></i>Panier</a>
+                    <a class=\"nav-link text-uppercase hvr-underline-reveal text-dark\" href=\"#\"><i class=\"fas fa-shopping-bag me-2\"></i>Panier</a>
                 </li>
             </ul>
             <!-- / navbar -->
@@ -215,7 +215,20 @@ class __TwigTemplate_8a0eb94714a874e082f3eb166c1dd3188d0445386185c24a60503e0e8f2
         // line 54
         $this->displayBlock('content', $context, $blocks);
         // line 55
-        echo "        ";
+        echo "            <!-- / footer -->
+            <ul class=\"nav justify-content-center fixed-bottom\">
+                <li class=\"nav-item\">
+                    <a class=\"nav-link text-secondary\" href=\"#\">Paiement</a>
+                </li>
+                <li class=\"nav-item\">
+                    <a class=\"nav-link text-secondary\" href=\"#\">CecylByCrechou &#169; Tous droits réservés</a>
+                </li>
+                <li class=\"nav-item\">
+                    <a class=\"nav-link text-secondary\" href=\"#\">Mentions légales</a>
+                </li>
+            </ul>
+            <!-- / footer -->
+        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -249,7 +262,7 @@ class __TwigTemplate_8a0eb94714a874e082f3eb166c1dd3188d0445386185c24a60503e0e8f2
 
     public function getDebugInfo()
     {
-        return array (  228 => 54,  218 => 55,  216 => 54,  204 => 47,  190 => 38,  182 => 35,  174 => 30,  169 => 27,  159 => 26,  141 => 17,  131 => 16,  115 => 10,  113 => 9,  103 => 8,  84 => 5,  72 => 56,  70 => 26,  66 => 24,  64 => 16,  61 => 15,  58 => 8,  54 => 5,  48 => 1,);
+        return array (  241 => 54,  218 => 55,  216 => 54,  204 => 47,  190 => 38,  182 => 35,  174 => 30,  169 => 27,  159 => 26,  141 => 17,  131 => 16,  115 => 10,  113 => 9,  103 => 8,  84 => 5,  72 => 69,  70 => 26,  66 => 24,  64 => 16,  61 => 15,  58 => 8,  54 => 5,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -284,30 +297,43 @@ class __TwigTemplate_8a0eb94714a874e082f3eb166c1dd3188d0445386185c24a60503e0e8f2
             <ul class=\"nav justify-content-center p-5\">
                 <li class=\"nav-item me-auto\">
                     <a class=\"nav-link\" href=\"{{ path('show_home') }}\">
-                        <img src=\"/docs/5.0/assets/brand/bootstrap-logo.svg\" alt=\"\" width=\"30\" height=\"24\">
+                        <img src=\"#\" alt=\"logo\" height=\"102\">
                     </a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link text-uppercase {{ app.request.get('_route') == 'show_home' ? 'text-warning' : 'text-dark' }}\" href=\"{{ path('show_home') }}\"><i class=\"far fa-user me-2\"></i>Artiste</a>
+                    <a class=\"nav-link text-uppercase hvr-underline-reveal {{ app.request.get('_route') == 'show_home' ? 'text-warning' : 'text-dark' }}\" href=\"{{ path('show_home') }}\"><i class=\"far fa-user me-2\"></i>Artiste</a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link text-uppercase {{ app.request.get('_route') == 'show_gallery' ? 'text-warning' : 'text-dark' }}\" href=\"{{ path('show_gallery') }}\"><i class=\"far fa-images me-2\"></i>Galerie</a>
+                    <a class=\"nav-link text-uppercase hvr-underline-reveal {{ app.request.get('_route') == 'show_gallery' ? 'text-warning' : 'text-dark' }}\" href=\"{{ path('show_gallery') }}\"><i class=\"far fa-images me-2\"></i>Galerie</a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link text-uppercase text-dark\" href=\"#\"><i class=\"fas fa-shopping-cart me-2\"></i>Boutique</a>
+                    <a class=\"nav-link text-uppercase hvr-underline-reveal text-dark\" href=\"#\"><i class=\"fas fa-shopping-cart me-2\"></i>Boutique</a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link text-uppercase text-dark\" href=\"#\"><i class=\"fab fa-instagram me-2\"></i>Instagram</a>
+                    <a class=\"nav-link text-uppercase hvr-underline-reveal text-dark\" href=\"#\"><i class=\"fab fa-instagram me-2\"></i>Instagram</a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link text-uppercase {{ app.request.get('_route') == 'show_contact' ? 'text-warning' : 'text-dark' }}\" href=\"{{ path('show_contact') }}\"><i class=\"far fa-envelope me-2\"></i>Contact</a>
+                    <a class=\"nav-link text-uppercase hvr-underline-reveal {{ app.request.get('_route') == 'show_contact' ? 'text-warning' : 'text-dark' }}\" href=\"{{ path('show_contact') }}\"><i class=\"far fa-envelope me-2\"></i>Contact</a>
                 </li>
                 <li class=\"nav-item ms-auto\">
-                    <a class=\"nav-link text-uppercase text-dark\" href=\"#\"><i class=\"fas fa-shopping-bag me-2\"></i>Panier</a>
+                    <a class=\"nav-link text-uppercase hvr-underline-reveal text-dark\" href=\"#\"><i class=\"fas fa-shopping-bag me-2\"></i>Panier</a>
                 </li>
             </ul>
             <!-- / navbar -->
             {% block content %}{% endblock %}
+            <!-- / footer -->
+            <ul class=\"nav justify-content-center fixed-bottom\">
+                <li class=\"nav-item\">
+                    <a class=\"nav-link text-secondary\" href=\"#\">Paiement</a>
+                </li>
+                <li class=\"nav-item\">
+                    <a class=\"nav-link text-secondary\" href=\"#\">CecylByCrechou &#169; Tous droits réservés</a>
+                </li>
+                <li class=\"nav-item\">
+                    <a class=\"nav-link text-secondary\" href=\"#\">Mentions légales</a>
+                </li>
+            </ul>
+            <!-- / footer -->
         {% endblock %}
     </body>
 </html>
