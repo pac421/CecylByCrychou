@@ -68,7 +68,7 @@ class __TwigTemplate_8a0eb94714a874e082f3eb166c1dd3188d0445386185c24a60503e0e8f2
         ";
         // line 26
         $this->displayBlock('body', $context, $blocks);
-        // line 69
+        // line 75
         echo "    </body>
 </html>
 ";
@@ -218,13 +218,19 @@ class __TwigTemplate_8a0eb94714a874e082f3eb166c1dd3188d0445386185c24a60503e0e8f2
         echo "            <!-- / footer -->
             <ul class=\"nav justify-content-center fixed-bottom\">
                 <li class=\"nav-item\">
-                    <a class=\"nav-link text-secondary\" href=\"#\">Paiement</a>
+                    <a class=\"nav-link text-secondary hvr-grow\" href=\"#\">Paiement</a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link text-secondary\" href=\"#\">CecylByCrechou &#169; Tous droits réservés</a>
+                    <a class=\"nav-link text-secondary\">-</a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link text-secondary\" href=\"#\">Mentions légales</a>
+                    <a class=\"nav-link text-secondary\">Crychou &#169; Tous droits réservés</a>
+                </li>
+                <li class=\"nav-item\">
+                    <a class=\"nav-link text-secondary\">-</a>
+                </li>
+                <li class=\"nav-item\">
+                    <a class=\"nav-link text-secondary hvr-grow\" href=\"#\">Mentions légales</a>
                 </li>
             </ul>
             <!-- / footer -->
@@ -262,7 +268,7 @@ class __TwigTemplate_8a0eb94714a874e082f3eb166c1dd3188d0445386185c24a60503e0e8f2
 
     public function getDebugInfo()
     {
-        return array (  241 => 54,  218 => 55,  216 => 54,  204 => 47,  190 => 38,  182 => 35,  174 => 30,  169 => 27,  159 => 26,  141 => 17,  131 => 16,  115 => 10,  113 => 9,  103 => 8,  84 => 5,  72 => 69,  70 => 26,  66 => 24,  64 => 16,  61 => 15,  58 => 8,  54 => 5,  48 => 1,);
+        return array (  247 => 54,  218 => 55,  216 => 54,  204 => 47,  190 => 38,  182 => 35,  174 => 30,  169 => 27,  159 => 26,  141 => 17,  131 => 16,  115 => 10,  113 => 9,  103 => 8,  84 => 5,  72 => 75,  70 => 26,  66 => 24,  64 => 16,  61 => 15,  58 => 8,  54 => 5,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -324,13 +330,19 @@ class __TwigTemplate_8a0eb94714a874e082f3eb166c1dd3188d0445386185c24a60503e0e8f2
             <!-- / footer -->
             <ul class=\"nav justify-content-center fixed-bottom\">
                 <li class=\"nav-item\">
-                    <a class=\"nav-link text-secondary\" href=\"#\">Paiement</a>
+                    <a class=\"nav-link text-secondary hvr-grow\" href=\"#\">Paiement</a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link text-secondary\" href=\"#\">CecylByCrechou &#169; Tous droits réservés</a>
+                    <a class=\"nav-link text-secondary\">-</a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link text-secondary\" href=\"#\">Mentions légales</a>
+                    <a class=\"nav-link text-secondary\">Crychou &#169; Tous droits réservés</a>
+                </li>
+                <li class=\"nav-item\">
+                    <a class=\"nav-link text-secondary\">-</a>
+                </li>
+                <li class=\"nav-item\">
+                    <a class=\"nav-link text-secondary hvr-grow\" href=\"#\">Mentions légales</a>
                 </li>
             </ul>
             <!-- / footer -->

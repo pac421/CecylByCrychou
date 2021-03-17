@@ -13,11 +13,12 @@ return [[
         'app' => [
             'js' => [
                 '/build/runtime.js',
-                '/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_bootstrap_dist_js_boo-6a5154.js',
+                '/build/vendors-node_modules_fortawesome_fontawesome-free_js_all_js-node_modules_symfony_stimulus-bri-cf3897.js',
                 '/build/app.js',
             ],
             'css' => [
-                '/build/app.scss',
+                '/build/vendors-node_modules_fortawesome_fontawesome-free_js_all_js-node_modules_symfony_stimulus-bri-cf3897.css',
+                '/build/app.css',
             ],
         ],
     ],
