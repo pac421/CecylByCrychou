@@ -1,10 +1,24 @@
 // bootstrap variables overriding
-$orange: #ff8c00;
+$orange: #FF6700;
 $warning: $orange;
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "../../node_modules/hover.css/css/hover-min.css";
 
+body {
+
+}
+
 .hvr-underline-reveal::before {
-  background: orange;
+  background: $orange;
+}
+
+.black-link {
+  color: #212529;
+  text-decoration: none;
+}
+
+.black-link:hover {
+  color: #212529;
+  text-decoration: underline;
 }

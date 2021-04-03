@@ -12,6 +12,7 @@ use Symfony\Component\Uid\Uuid;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
+ * @ORM\HasLifecycleCallbacks
  */
 class User implements UserInterface
 {
@@ -34,7 +35,7 @@ class User implements UserInterface
     private $lastname;
 
     /**
-     * @ORM\Column(type="string", length=180, unique=true)
+     * @ORM\Column(type="string", length=255, unique=true)
      */
     private $email;
 
@@ -50,7 +51,7 @@ class User implements UserInterface
     private $password;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime", nullable=true)
      */
     private $createdAt;
 
@@ -69,7 +70,9 @@ class User implements UserInterface
      */
     public function onPrePersist()
     {
-        $this->createdAt = new \DateTime("now");
+        if ($this->getCreatedAt() === null) {
+            $this->setCreatedAt(new \DateTime('now'));
+        }
     }
 
     /**
@@ -77,7 +80,7 @@ class User implements UserInterface
      */
     public function onPreUpdate()
     {
-        $this->updatedAt = new \DateTime("now");
+        $this->setUpdatedAt(new \DateTime('now'));
     }
 
     public function getId(): ?Uuid
@@ -92,7 +95,7 @@ class User implements UserInterface
 
     public function setFirstname(string $firstname): self
     {
-        $this->firstname = $firstname;
+        $this->firstname = ucwords(strtolower($firstname));
 
         return $this;
     }
@@ -104,7 +107,7 @@ class User implements UserInterface
 
     public function setLastname(string $lastname): self
     {
-        $this->lastname = $lastname;
+        $this->lastname = strtoupper($lastname);
 
         return $this;
     }
@@ -116,7 +119,7 @@ class User implements UserInterface
 
     public function setEmail(string $email): self
     {
-        $this->email = $email;
+        $this->email = strtolower($email);
 
         return $this;
     }
@@ -153,12 +156,12 @@ class User implements UserInterface
     /**
      * @see UserInterface
      */
-    public function getPassword(): string
+    public function getPassword(): ?string
     {
         return (string) $this->password;
     }
 
-    public function setPassword(string $password): self
+    public function setPassword(?string $password): self
     {
         $this->password = $password;
 

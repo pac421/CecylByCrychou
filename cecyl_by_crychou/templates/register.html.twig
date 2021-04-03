@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription &#183; Crychou{% endblock %}
+
+{% block content %}
+    <div class="container-md">
+        <h1 class="my-5"><span class="text-warning">/</span>&nbsp;Inscription</h1>
+        {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+            <div class="row g-3">
+                <div class="col-12 col-md-6">
+                    <div class="form-floating">
+                        {{ form_widget(form.firstname) }}
+                        {{ form_label(form.firstname) }}
+                        <div class="invalid-feedback d-block">
+                            {{ form_errors(form.firstname) }}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="form-floating">
+                        {{ form_widget(form.lastname) }}
+                        {{ form_label(form.lastname) }}
+                        <div class="invalid-feedback d-block">
+                            {{ form_errors(form.lastname) }}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-floating">
+                        {{ form_widget(form.email) }}
+                        {{ form_label(form.email) }}
+                        <div class="invalid-feedback d-block">
+                            {{ form_errors(form.email) }}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="form-floating">
+                        {{ form_widget(form.password.first) }}
+                        {{ form_label(form.password.first) }}
+                        <div class="invalid-feedback d-block">
+                            {{ form_errors(form.password.first) }}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="form-floating">
+                        {{ form_widget(form.password.second) }}
+                        {{ form_label(form.password.second) }}
+                        <div class="invalid-feedback d-block">
+                            {{ form_errors(form.password.second) }}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-check">
+                        {{ form_widget(form.agree) }}
+                        {{ form_label(form.agree) }}
+                        <div class="invalid-feedback d-block">
+                            {{ form_errors(form.agree) }}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    {{ form_row(form.submit) }}
+                </div>
+            </div>
+        {{ form_end(form) }}
+        <div class="mt-4">Déjà inscrit ? <a href="{{ path('app_login') }}" class="link-warning">Connexion</a></div>
+    </div>
+{% endblock %}

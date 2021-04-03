@@ -65,7 +65,7 @@ class __TwigTemplate_2697373b5b3b0cb352584c6fe2a803e339e899734519a6f711327e51718
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Galerie | Crychou";
+        echo "Galerie &#183; Crychou";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -114,7 +114,7 @@ class __TwigTemplate_2697373b5b3b0cb352584c6fe2a803e339e899734519a6f711327e51718
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Galerie | Crychou{% endblock %}
+{% block title %}Galerie &#183; Crychou{% endblock %}
 
 {% block content %}
 

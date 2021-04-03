@@ -2,75 +2,96 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <title>{% block title %}Crychou{% endblock %}</title>
-        {# Run `composer require symfony/webpack-encore-bundle`
-           and uncomment the following Encore helpers to start using Symfony UX #}
+
         {% block stylesheets %}
-            {# 'app' must match the first argument to addEntry() in webpack.config.js #}
             {{ encore_entry_link_tags('app') }}
-
-            <!-- Renders a link tag (if your module requires any CSS)
-                 <link rel="stylesheet" href="/build/app.scss"> -->
-        {% endblock %}
-
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-
-            <!-- Renders app.js & a webpack runtime.js file
-                <script src="/build/runtime.js" defer></script>
-                <script src="/build/app.js" defer></script>
-                See note below about the "defer" attribute -->
         {% endblock %}
     </head>
     <body>
         {% block body %}
-            <!-- navbar -->
-            <ul class="nav justify-content-center p-5">
-                <li class="nav-item me-auto">
-                    <a class="nav-link" href="{{ path('show_home') }}">
-                        <img src="#" alt="logo" height="102">
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-uppercase hvr-underline-reveal {{ app.request.get('_route') == 'show_home' ? 'text-warning' : 'text-dark' }}" href="{{ path('show_home') }}"><i class="far fa-user me-2"></i>Artiste</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-uppercase hvr-underline-reveal {{ app.request.get('_route') == 'show_gallery' ? 'text-warning' : 'text-dark' }}" href="{{ path('show_gallery') }}"><i class="far fa-images me-2"></i>Galerie</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-uppercase hvr-underline-reveal text-dark" href="#"><i class="fas fa-shopping-cart me-2"></i>Boutique</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-uppercase hvr-underline-reveal text-dark" href="#"><i class="fab fa-instagram me-2"></i>Instagram</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-uppercase hvr-underline-reveal {{ app.request.get('_route') == 'show_contact' ? 'text-warning' : 'text-dark' }}" href="{{ path('show_contact') }}"><i class="far fa-envelope me-2"></i>Contact</a>
-                </li>
-                <li class="nav-item ms-auto">
-                    <a class="nav-link text-uppercase hvr-underline-reveal text-dark" href="#"><i class="fas fa-shopping-bag me-2"></i>Panier</a>
-                </li>
-            </ul>
-            <!-- / navbar -->
-            {% block content %}{% endblock %}
+            <div class="min-vh-100">
+                <!-- top bar -->
+                <nav class="navbar navbar-light bg-light">
+                    <form class="container-fluid justify-content-end">
+                        {% if app.user %}
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-user-circle me-2"></i>{{ app.user.firstname }} {{ app.user.lastname }}
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i>Profil</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="{{ path('app_logout') }}"><i class="fas fa-sign-out-alt me-2"></i>Déconnexion</a></li>
+                                </ul>
+                            </div>
+                        {% else %}
+                            <a class="btn btn-sm btn-warning text-white me-2" type="button" href="{{ path('app_login') }}">Connexion</a>
+                            <a class="btn btn-sm btn-outline-secondary" type="button" href="{{ path('show_register') }}">Inscription</a>
+                        {% endif %}
+                    </form>
+                </nav>
+                <!-- / top bar -->
+                <!-- navbar -->
+                <nav class="navbar navbar-expand-lg navbar-light bg-white p-3 shadow-sm">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="{{ path('show_home') }}">
+                            <img src="#" alt="logo" width="30" height="24">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+                                <li class="nav-item px-2 mx-auto">
+                                    <a class="nav-link text-uppercase hvr-underline-reveal {{ app.request.get('_route') == 'show_home' ? 'text-warning' : 'text-dark' }}" href="{{ path('show_home') }}"><i class="far fa-user me-2"></i>Biographie</a>
+                                </li>
+                                <li class="nav-item px-2 mx-auto">
+                                    <a class="nav-link text-uppercase hvr-underline-reveal {{ app.request.get('_route') == 'show_gallery' ? 'text-warning' : 'text-dark' }}" href="{{ path('show_gallery') }}"><i class="far fa-images me-2"></i>œuvres</a>
+                                </li>
+                                <li class="nav-item px-2 mx-auto">
+                                    <a class="nav-link text-uppercase hvr-underline-reveal text-dark" href="#"><i class="fas fa-shopping-cart me-2"></i>Boutique</a>
+                                </li>
+                                <li class="nav-item px-2 mx-auto">
+                                    <a class="nav-link text-uppercase hvr-underline-reveal text-dark" href="#"><i class="far fa-newspaper me-2"></i>Actualités</a>
+                                </li>
+                                <li class="nav-item px-2 mx-auto">
+                                    <a class="nav-link text-uppercase hvr-underline-reveal {{ app.request.get('_route') == 'show_contact' ? 'text-warning' : 'text-dark' }}" href="{{ path('show_contact') }}"><i class="far fa-envelope me-2"></i>Contact</a>
+                                </li>
+                                {% if is_granted('ROLE_ADMIN') %}
+                                    <li class="nav-item px-2 mx-auto">
+                                        <a class="nav-link text-uppercase hvr-underline-reveal text-dark" href="{{ path('show_admin_home') }}"><i class="fas fa-sliders-h me-2"></i>Administration</a>
+                                    </li>
+                                {% endif %}
+                            </ul>
+                            <button type="button" class="btn btn-link position-relative link-dark" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mon Panier">
+                                <i class="fas fa-shopping-bag fa-lg"></i><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">0</span>
+                            </button>
+                        </div>
+                    </div>
+                </nav>
+                <!-- / navbar -->
+                {% block content %}{% endblock %}
+            </div>
             <!-- / footer -->
-            <ul class="nav justify-content-center fixed-bottom">
+            <ul class="nav justify-content-center">
                 <li class="nav-item">
                     <a class="nav-link text-secondary hvr-grow" href="#">Paiement</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-secondary">-</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-secondary">Crychou &#169; Tous droits réservés</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-secondary">-</a>
+                    <a class="nav-link text-secondary">Crychou &#169; 2021 &#183; Tous droits réservés</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-secondary hvr-grow" href="#">Mentions légales</a>
                 </li>
             </ul>
             <!-- / footer -->
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </body>
 </html>

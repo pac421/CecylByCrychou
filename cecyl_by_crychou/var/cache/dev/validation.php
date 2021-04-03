@@ -11,6 +11,8 @@ return [[
 'Traversable' => 4,
 'Countable' => 5,
 'ArrayAccess' => 6,
+'App.Entity.User' => 7,
+'Symfony.Component.Security.Core.User.UserInterface' => 8,
 
 ], [
 
@@ -172,6 +174,288 @@ return [[
                 ],
                 'defaultGroup' => [
                     'ArrayAccess',
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+},
+7 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            (($f = &\Symfony\Component\VarExporter\Internal\Registry::$factories)['Symfony\\Component\\Validator\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::f('Symfony\\Component\\Validator\\Mapping\\ClassMetadata'))(),
+            ($f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::f('Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'))(),
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Symfony\\Component\\Validator\\Constraints\\NotBlank'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\NotBlank')),
+            clone ($p['Symfony\\Component\\Validator\\Constraints\\Length'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\Length')),
+            clone ($p['Symfony\\Component\\Validator\\Constraints\\Regex'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\Regex')),
+            $f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'](),
+            clone $p['Symfony\\Component\\Validator\\Constraints\\NotBlank'],
+            clone $p['Symfony\\Component\\Validator\\Constraints\\Length'],
+            clone $p['Symfony\\Component\\Validator\\Constraints\\Regex'],
+            $f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'](),
+            clone $p['Symfony\\Component\\Validator\\Constraints\\NotBlank'],
+            clone $p['Symfony\\Component\\Validator\\Constraints\\Length'],
+            clone ($p['Symfony\\Component\\Validator\\Constraints\\Email'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\Email')),
+            $f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'](),
+            clone $p['Symfony\\Component\\Validator\\Constraints\\NotBlank'],
+            clone $p['Symfony\\Component\\Validator\\Constraints\\Length'],
+            clone ($p['Symfony\\Component\\Validator\\Constraints\\NotCompromisedPassword'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\NotCompromisedPassword')),
+            clone ($p['Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'name' => [
+                    'App\\Entity\\User',
+                    'firstname',
+                    5 => 'lastname',
+                    9 => 'email',
+                    13 => 'password',
+                ],
+                'defaultGroup' => [
+                    'User',
+                ],
+                'members' => [
+                    [
+                        'firstname' => [
+                            $o[1],
+                        ],
+                        'lastname' => [
+                            $o[5],
+                        ],
+                        'email' => [
+                            $o[9],
+                        ],
+                        'password' => [
+                            $o[13],
+                        ],
+                    ],
+                ],
+                'properties' => [
+                    [
+                        'firstname' => $o[1],
+                        'lastname' => $o[5],
+                        'email' => $o[9],
+                        'password' => $o[13],
+                    ],
+                ],
+                'constraints' => [
+                    [
+                        $o[17],
+                    ],
+                    [
+                        $o[2],
+                        $o[3],
+                        $o[4],
+                    ],
+                    5 => [
+                        $o[6],
+                        $o[7],
+                        $o[8],
+                    ],
+                    9 => [
+                        $o[10],
+                        $o[11],
+                        $o[12],
+                    ],
+                    13 => [
+                        $o[14],
+                        $o[15],
+                        $o[16],
+                    ],
+                ],
+                'constraintsByGroup' => [
+                    [
+                        'Default' => [
+                            $o[17],
+                        ],
+                        'User' => [
+                            $o[17],
+                        ],
+                    ],
+                    [
+                        'Default' => [
+                            $o[2],
+                            $o[3],
+                            $o[4],
+                        ],
+                        'User' => [
+                            $o[2],
+                            $o[3],
+                            $o[4],
+                        ],
+                    ],
+                    5 => [
+                        'Default' => [
+                            $o[6],
+                            $o[7],
+                            $o[8],
+                        ],
+                        'User' => [
+                            $o[6],
+                            $o[7],
+                            $o[8],
+                        ],
+                    ],
+                    9 => [
+                        'Default' => [
+                            $o[10],
+                            $o[11],
+                            $o[12],
+                        ],
+                        'User' => [
+                            $o[10],
+                            $o[11],
+                            $o[12],
+                        ],
+                    ],
+                    13 => [
+                        'Default' => [
+                            $o[14],
+                            $o[15],
+                            $o[16],
+                        ],
+                        'User' => [
+                            $o[14],
+                            $o[15],
+                            $o[16],
+                        ],
+                    ],
+                ],
+                'class' => [
+                    1 => 'App\\Entity\\User',
+                    5 => 'App\\Entity\\User',
+                    9 => 'App\\Entity\\User',
+                    13 => 'App\\Entity\\User',
+                ],
+                'property' => [
+                    1 => 'firstname',
+                    5 => 'lastname',
+                    9 => 'email',
+                    13 => 'password',
+                ],
+                'message' => [
+                    2 => 'Le prénom ne peut pas être vide.',
+                    4 => 'Le prénom ne doit comporter que des lettres et certains caractères spéciaux.',
+                    6 => 'Le nom ne peut pas être vide.',
+                    8 => 'Le nom ne doit comporter que des lettres et certains caractères spéciaux.',
+                    10 => 'L\'adresse email ne peut pas être vide.',
+                    12 => 'Cette adresse email n\'est pas une adresse email valide',
+                    14 => 'Le mot de passe ne peut pas être vide.',
+                    16 => 'Ce mot de passe n\'est pas suffisament fort et peut facilement être piraté.',
+                    'Cette adresse email est déjà utilisée. Si cette adresse email vous appartient, veuillez utilisez le formulaire de connexion.',
+                ],
+                'groups' => [
+                    2 => [
+                        'Default',
+                        'User',
+                    ],
+                    [
+                        'Default',
+                        'User',
+                    ],
+                    [
+                        'Default',
+                        'User',
+                    ],
+                    6 => [
+                        'Default',
+                        'User',
+                    ],
+                    [
+                        'Default',
+                        'User',
+                    ],
+                    [
+                        'Default',
+                        'User',
+                    ],
+                    10 => [
+                        'Default',
+                        'User',
+                    ],
+                    [
+                        'Default',
+                        'User',
+                    ],
+                    [
+                        'Default',
+                        'User',
+                    ],
+                    14 => [
+                        'Default',
+                        'User',
+                    ],
+                    [
+                        'Default',
+                        'User',
+                    ],
+                    [
+                        'Default',
+                        'User',
+                    ],
+                    [
+                        'Default',
+                        'User',
+                    ],
+                ],
+                'maxMessage' => [
+                    3 => 'Le prénom ne peut pas comporter plus de {{ limit }} caractères.',
+                    7 => 'Le nom ne peut pas comporter plus de {{ limit }} caractères.',
+                    11 => 'L\'adresse email ne peut pas comporter plus de {{ limit }} caractères.',
+                    15 => 'Le mot de passe ne peut pas comporter plus de {{ limit }} caractères.',
+                ],
+                'minMessage' => [
+                    3 => 'Le prénom doit comporter au moins {{ limit }} caractères.',
+                    7 => 'Le nom doit comporter au moins {{ limit }} caractères.',
+                    15 => 'Le mot de passe doit comporter au moins {{ limit }} caractères.',
+                ],
+                'max' => [
+                    3 => 64,
+                    7 => 64,
+                    11 => 255,
+                    15 => 64,
+                ],
+                'min' => [
+                    3 => 2,
+                    7 => 2,
+                    15 => 8,
+                ],
+                'pattern' => [
+                    4 => '/^[a-zA-Z- ]+$/i',
+                    8 => '/^[a-zA-Z- ]+$/i',
+                ],
+                'mode' => [
+                    12 => 'strict',
+                ],
+                'fields' => [
+                    17 => [
+                        'email',
+                    ],
+                ],
+                'errorPath' => [
+                    17 => 'email',
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+},
+8 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            (\Symfony\Component\VarExporter\Internal\Registry::$factories['Symfony\\Component\\Validator\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::f('Symfony\\Component\\Validator\\Mapping\\ClassMetadata'))(),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'name' => [
+                    'Symfony\\Component\\Security\\Core\\User\\UserInterface',
+                ],
+                'defaultGroup' => [
+                    'UserInterface',
                 ],
             ],
         ],

@@ -13,9 +13,17 @@ return [
         '/_profiler/search_bar' => [[['_route' => '_profiler_search_bar', '_controller' => 'web_profiler.controller.profiler::searchBarAction'], null, null, null, false, false, null]],
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
+        '/administration' => [[['_route' => 'show_admin_home', '_controller' => 'App\\Controller\\Admin\\HomeController::show'], null, null, null, false, false, null]],
+        '/messages' => [[['_route' => 'show_admin_messages', '_controller' => 'App\\Controller\\Admin\\MessagesController::show'], null, null, null, false, false, null]],
+        '/get-all-messages' => [[['_route' => 'app_admin_messages_getallmessages', '_controller' => 'App\\Controller\\Admin\\MessagesController::getAllMessages'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/utilisateurs' => [[['_route' => 'show_admin_users', '_controller' => 'App\\Controller\\Admin\\UsersController::show'], null, null, null, false, false, null]],
+        '/get-all-users' => [[['_route' => 'app_admin_users_getallusers', '_controller' => 'App\\Controller\\Admin\\UsersController::getAllUsers'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/contact' => [[['_route' => 'show_contact', '_controller' => 'App\\Controller\\ContactController::show'], null, null, null, false, false, null]],
         '/galerie' => [[['_route' => 'show_gallery', '_controller' => 'App\\Controller\\GalleryController::show'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'show_home', '_controller' => 'App\\Controller\\HomeController::show'], null, null, null, false, false, null]],
+        '/inscription' => [[['_route' => 'show_register', '_controller' => 'App\\Controller\\RegisterController::show'], null, null, null, false, false, null]],
+        '/connexion' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
+        '/deconnexion' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

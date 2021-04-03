@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}Administration &#183; Crychou{% endblock %}</title>
+
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+    {% endblock %}
+</head>
+<body>
+{% block body %}
+    <div class="d-flex vh-100 overflow-hidden">
+        <div class="d-flex flex-column p-3 text-white bg-dark" style="width: 300px;">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                <i class="fas fa-sliders-h me-3"></i>
+                <span class="fs-5">Administration</span>
+            </a>
+            <hr>
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item">
+                    <a href="{{ path('show_admin_home') }}" class="nav-link {{ app.request.get('_route') == 'show_admin_home' ? 'active' : 'text-white' }}">
+                        <i class="fas fa-tachometer-alt me-2"></i>Tableau de bord
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ path('show_admin_users') }}" class="nav-link {{ app.request.get('_route') == 'show_admin_users' ? 'active' : 'text-white' }}">
+                        <i class="fas fa-users me-2"></i>Utilisateurs
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ path('show_admin_messages') }}" class="nav-link {{ app.request.get('_route') == 'show_admin_messages' ? 'active' : 'text-white' }}">
+                        <i class="fas fa-inbox me-2"></i>Messages
+                    </a>
+                </li>
+            </ul>
+            <hr>
+            <a href="{{ path('show_home') }}" class="text-white text-decoration-none text-uppercase">
+                <strong><i class="fas fa-backspace me-2"></i>Retour au site</strong>
+            </a>
+        </div>
+        <div class="w-100 p-4 overflow-auto">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('app') }}
+{% endblock %}
+</body>
+</html>

@@ -1,22 +1,49 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Contact | Crychou{% endblock %}
+{% block title %}Contact &#183; Crychou{% endblock %}
 
 {% block content %}
     <div class="container-md">
-        <h1 class="h1 my-5">Contact</h1>
-        <div class="mb-3">
-            <label for="name" class="form-label">Nom</label>
-            <input type="text" class="form-control" id="name">
+        <h1 class="my-5"><span class="text-warning">/</span>&nbsp;Contact</h1>
+        <div class="row align-items-center">
+            <div class="col-12 col-md-6 mb-5">
+                <dl class="row">
+                    <dt class="col-1 text-warning mb-4">
+                        <i class="far fa-envelope fa-lg me-3"></i>
+                    </dt>
+                    <dd class="col-11"><a href="mailto:contact@crychou.com" class="black-link">contact@crychou.com</a></dd>
+                    <dt class="col-1 text-warning mb-4">
+                        <i class="fas fa-phone fa-lg me-3"></i>
+                    </dt>
+                    <dd class="col-11"><a href="tel:+33624213748" class="black-link">+33 6 11 05 29 18</a></dd>
+                    <dt class="col-1 text-warning mb-4">
+                        <i class="fab fa-instagram fa-lg me-3"></i>
+                    </dt>
+                    <dd class="col-11"><a href="https://www.instagram.com/creationsbycecylbycrychou/" target="_blank" class="black-link">creationsbycecylbycrychou</a></dd>
+                    <dt class="col-1 text-warning mb-4">
+                        <i class="fas fa-map-marker-alt fa-lg me-3"></i>
+                    </dt>
+                    <dd class="col-11"><span class="text-dark">Crychou Creations<br />BP 90020<br />83401 HYERES CEDEX<br />FRANCE</span></dd>
+                </dl>
+            </div>
+            <div class="col-12 col-md-6 mb-5">
+                <h4 class="mb-4"><i class="far fa-paper-plane me-4"></i>Envoyer un message</h4>
+                <form class="form-floating">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="name" placeholder="Nom">
+                        <label for="name">Nom</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="email" placeholder="Email">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" id="message" placeholder="Message" style="height: 200px"></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    <button type="button" class="btn btn-warning text-white">Envoyer</button>
+                </form>
+            </div>
         </div>
-        <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email">
-        </div>
-        <div class="mb-3">
-            <label for="message" class="form-label">Message</label>
-            <textarea class="form-control" id="message" rows="7"></textarea>
-        </div>
-        <button type="button" class="btn btn-warning text-white">Envoyer</button>
     </div>
 {% endblock %}

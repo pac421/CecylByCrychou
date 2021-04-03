@@ -1,0 +1,48 @@
+App\Entity\User:
+  constraints:
+    - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+        fields: [ email ]
+        errorPath: email
+        message: Cette adresse email est déjà utilisée. Si cette adresse email vous appartient, veuillez utilisez le formulaire de connexion.
+  properties:
+    firstname:
+      - NotBlank:
+          message: Le prénom ne peut pas être vide.
+      - Length:
+          min: 2
+          max: 64
+          minMessage: Le prénom doit comporter au moins {{ limit }} caractères.
+          maxMessage: Le prénom ne peut pas comporter plus de {{ limit }} caractères.
+      - Regex:
+          pattern: '/^[a-zA-Z- ]+$/i'
+          message: Le prénom ne doit comporter que des lettres et certains caractères spéciaux.
+    lastname:
+      - NotBlank:
+          message: Le nom ne peut pas être vide.
+      - Length:
+          min: 2
+          max: 64
+          minMessage: Le nom doit comporter au moins {{ limit }} caractères.
+          maxMessage: Le nom ne peut pas comporter plus de {{ limit }} caractères.
+      - Regex:
+          pattern: '/^[a-zA-Z- ]+$/i'
+          message: Le nom ne doit comporter que des lettres et certains caractères spéciaux.
+    email:
+      - NotBlank:
+          message: L'adresse email ne peut pas être vide.
+      - Length:
+          max: 255
+          maxMessage: L'adresse email ne peut pas comporter plus de {{ limit }} caractères.
+      - Email:
+          mode: strict
+          message: Cette adresse email n'est pas une adresse email valide
+    password:
+      - NotBlank:
+          message: Le mot de passe ne peut pas être vide.
+      - Length:
+          min: 8
+          max: 64
+          minMessage: Le mot de passe doit comporter au moins {{ limit }} caractères.
+          maxMessage: Le mot de passe ne peut pas comporter plus de {{ limit }} caractères.
+      - NotCompromisedPassword:
+          message: Ce mot de passe n'est pas suffisament fort et peut facilement être piraté.
