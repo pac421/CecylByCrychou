@@ -4,6 +4,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('favicon/apple-touch-icon.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon/favicon-16x16.png') }}">
+        <link rel="manifest" href="{{ asset('favicon/site.webmanifest') }}">
+        <link rel="mask-icon" href="{{ asset('favicon/safari-pinned-tab.svg') }}" color="#ff6700">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+
         <title>{% block title %}Crychou{% endblock %}</title>
 
         {% block stylesheets %}
@@ -15,7 +23,12 @@
             <div class="min-vh-100">
                 <!-- top bar -->
                 <nav class="navbar navbar-light bg-light">
-                    <form class="container-fluid justify-content-end">
+                    <div class="w-100 d-flex justify-content-between align-items-center">
+                        <div class="w-25"></div>
+                        <div class="w-25 text-center">
+                            <a href="mailto:contact@crychou.com" class="link-secondary text-decoration-none btn-sm"><i class="far fa-envelope me-2"></i>contact@crychou.com</a>
+                            <a href="tel:+33624213748" class="link-secondary text-decoration-none btn-sm"><i class="fas fa-phone me-2"></i>+33 6 11 05 29 18</a>
+                        </div>
                         {% if app.user %}
                             <div class="btn-group">
                                 <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm" data-bs-toggle="dropdown" aria-expanded="false">
@@ -28,17 +41,19 @@
                                 </ul>
                             </div>
                         {% else %}
-                            <a class="btn btn-sm btn-warning text-white me-2" type="button" href="{{ path('app_login') }}">Connexion</a>
-                            <a class="btn btn-sm btn-outline-secondary" type="button" href="{{ path('show_register') }}">Inscription</a>
+                            <div class="w-25 text-end">
+                                <a class="btn btn-sm btn-outline-warning" type="button" href="{{ path('app_login') }}">Connexion</a>
+                                <a class="btn btn-sm me-3 btn-outline-secondary" type="button" href="{{ path('show_register') }}">Inscription</a>
+                            </div>
                         {% endif %}
-                    </form>
+                    </div>
                 </nav>
                 <!-- / top bar -->
                 <!-- navbar -->
                 <nav class="navbar navbar-expand-lg navbar-light bg-white p-3 shadow-sm">
                     <div class="container-fluid">
                         <a class="navbar-brand" href="{{ path('show_home') }}">
-                            <img src="#" alt="logo" width="30" height="24">
+                            <span class="font-eras fs-3">Cr<span class="font-viner">y</span>chou</span>
                         </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
@@ -46,23 +61,23 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
                                 <li class="nav-item px-2 mx-auto">
-                                    <a class="nav-link text-uppercase hvr-underline-reveal {{ app.request.get('_route') == 'show_home' ? 'text-warning' : 'text-dark' }}" href="{{ path('show_home') }}"><i class="far fa-user me-2"></i>Biographie</a>
+                                    <a class="nav-link text-uppercase hvr-underline-reveal {{ app.request.get('_route') == 'show_home' ? 'text-warning' : 'text-dark' }}" href="{{ path('show_home') }}"><i class="far fa-user me-2"></i>biographie</a>
                                 </li>
                                 <li class="nav-item px-2 mx-auto">
                                     <a class="nav-link text-uppercase hvr-underline-reveal {{ app.request.get('_route') == 'show_gallery' ? 'text-warning' : 'text-dark' }}" href="{{ path('show_gallery') }}"><i class="far fa-images me-2"></i>œuvres</a>
                                 </li>
                                 <li class="nav-item px-2 mx-auto">
-                                    <a class="nav-link text-uppercase hvr-underline-reveal text-dark" href="#"><i class="fas fa-shopping-cart me-2"></i>Boutique</a>
+                                    <a class="nav-link text-uppercase hvr-underline-reveal text-dark" href="#"><i class="fas fa-shopping-cart me-2"></i>boutique</a>
                                 </li>
                                 <li class="nav-item px-2 mx-auto">
-                                    <a class="nav-link text-uppercase hvr-underline-reveal text-dark" href="#"><i class="far fa-newspaper me-2"></i>Actualités</a>
+                                    <a class="nav-link text-uppercase hvr-underline-reveal text-dark" href="#"><i class="far fa-newspaper me-2"></i>actualités</a>
                                 </li>
                                 <li class="nav-item px-2 mx-auto">
-                                    <a class="nav-link text-uppercase hvr-underline-reveal {{ app.request.get('_route') == 'show_contact' ? 'text-warning' : 'text-dark' }}" href="{{ path('show_contact') }}"><i class="far fa-envelope me-2"></i>Contact</a>
+                                    <a class="nav-link text-uppercase hvr-underline-reveal {{ app.request.get('_route') == 'show_contact' ? 'text-warning' : 'text-dark' }}" href="{{ path('show_contact') }}"><i class="far fa-envelope me-2"></i>contact</a>
                                 </li>
                                 {% if is_granted('ROLE_ADMIN') %}
                                     <li class="nav-item px-2 mx-auto">
-                                        <a class="nav-link text-uppercase hvr-underline-reveal text-dark" href="{{ path('show_admin_home') }}"><i class="fas fa-sliders-h me-2"></i>Administration</a>
+                                        <a class="nav-link text-uppercase hvr-underline-reveal text-dark" href="{{ path('show_admin_home') }}"><i class="fas fa-sliders-h me-2"></i>administration</a>
                                     </li>
                                 {% endif %}
                             </ul>
@@ -75,18 +90,46 @@
                 <!-- / navbar -->
                 {% block content %}{% endblock %}
             </div>
-            <!-- / footer -->
-            <ul class="nav justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link text-secondary hvr-grow" href="#">Paiement</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-secondary">Crychou &#169; 2021 &#183; Tous droits réservés</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-secondary hvr-grow" href="#">Mentions légales</a>
-                </li>
-            </ul>
+            <!-- footer -->
+            <footer class="bg-light pt-4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <h5 class="mb-4"><span class="font-eras fs-3">Cr<span class="font-viner">y</span>chou</span></h5>
+                            <p>About the company, little description will goes here.. </p>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <h5 class="mb-4">Informations</h5>
+                            <ul>
+                                <li><a href="#" class="black-link">Paiement</a></li>
+                                <li><a href="#" class="black-link">Livraison</a></li>
+                                <li><a href="#" class="black-link">Conditions générales</a></li>
+                                <li><a href="#" class="black-link">Mentions légales</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <h5 class="mb-4">Inscription</h5>
+                            <p>Get access to your full Training and Marketing Suite.</p>
+                            <a class="btn btn-outline-warning" type="button" href="{{ path('show_register') }}">Inscription</a>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <h5 class="mb-4">Contact</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="mailto:contact@crychou.com" class="black-link"><i class="far fa-envelope me-2"></i>contact@crychou.com</a></li>
+                                <li><a href="tel:+33624213748" class="black-link"> <i class="fas fa-phone me-2"></i>+33 6 11 05 29 18</a></li>
+                                <li><a href="https://www.instagram.com/creationsbycecylbycrychou/" target="_blank" class="black-link"><i class="fab fa-instagram me-2"></i>creationsbycecylbycrychou</a></li>
+                            </ul>
+
+                    </div>
+                </div>
+                <div class="container mt-4">
+                    <div class="row">
+                        <div class="text-center">
+                            <p>Copyright Crychou © 2021. Tous droits réservés.</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
             <!-- / footer -->
         {% endblock %}
 

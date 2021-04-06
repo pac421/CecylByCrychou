@@ -51,26 +51,49 @@ class __TwigTemplate_8a0eb94714a874e082f3eb166c1dd3188d0445386185c24a60503e0e8f2
         <meta charset=\"UTF-8\">
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
 
-        <title>";
+        <link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"";
         // line 7
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("favicon/apple-touch-icon.png"), "html", null, true);
+        echo "\">
+        <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"";
+        // line 8
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("favicon/favicon-32x32.png"), "html", null, true);
+        echo "\">
+        <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"";
+        // line 9
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("favicon/favicon-16x16.png"), "html", null, true);
+        echo "\">
+        <link rel=\"manifest\" href=\"";
+        // line 10
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("favicon/site.webmanifest"), "html", null, true);
+        echo "\">
+        <link rel=\"mask-icon\" href=\"";
+        // line 11
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("favicon/safari-pinned-tab.svg"), "html", null, true);
+        echo "\" color=\"#ff6700\">
+        <meta name=\"msapplication-TileColor\" content=\"#da532c\">
+        <meta name=\"theme-color\" content=\"#ffffff\">
+
+        <title>";
+        // line 15
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
 
         ";
-        // line 9
+        // line 17
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 12
+        // line 20
         echo "    </head>
     <body>
         ";
-        // line 14
+        // line 22
         $this->displayBlock('body', $context, $blocks);
-        // line 92
+        // line 135
         echo "
         ";
-        // line 93
+        // line 136
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 96
+        // line 139
         echo "    </body>
 </html>
 ";
@@ -82,7 +105,7 @@ class __TwigTemplate_8a0eb94714a874e082f3eb166c1dd3188d0445386185c24a60503e0e8f2
 
     }
 
-    // line 7
+    // line 15
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -101,7 +124,7 @@ class __TwigTemplate_8a0eb94714a874e082f3eb166c1dd3188d0445386185c24a60503e0e8f2
 
     }
 
-    // line 9
+    // line 17
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -111,7 +134,7 @@ class __TwigTemplate_8a0eb94714a874e082f3eb166c1dd3188d0445386185c24a60503e0e8f2
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 10
+        // line 18
         echo "            ";
         echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackLinkTags("app");
         echo "
@@ -124,7 +147,7 @@ class __TwigTemplate_8a0eb94714a874e082f3eb166c1dd3188d0445386185c24a60503e0e8f2
 
     }
 
-    // line 14
+    // line 22
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -134,57 +157,65 @@ class __TwigTemplate_8a0eb94714a874e082f3eb166c1dd3188d0445386185c24a60503e0e8f2
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 15
+        // line 23
         echo "            <div class=\"min-vh-100\">
                 <!-- top bar -->
                 <nav class=\"navbar navbar-light bg-light\">
-                    <form class=\"container-fluid justify-content-end\">
+                    <div class=\"w-100 d-flex justify-content-between align-items-center\">
+                        <div class=\"w-25\"></div>
+                        <div class=\"w-25 text-center\">
+                            <a href=\"mailto:contact@crychou.com\" class=\"link-secondary text-decoration-none btn-sm\"><i class=\"far fa-envelope me-2\"></i>contact@crychou.com</a>
+                            <a href=\"tel:+33624213748\" class=\"link-secondary text-decoration-none btn-sm\"><i class=\"fas fa-phone me-2\"></i>+33 6 11 05 29 18</a>
+                        </div>
                         ";
-        // line 19
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 19, $this->source); })()), "user", [], "any", false, false, false, 19)) {
-            // line 20
+        // line 32
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 32, $this->source); })()), "user", [], "any", false, false, false, 32)) {
+            // line 33
             echo "                            <div class=\"btn-group\">
                                 <button type=\"button\" class=\"btn btn-outline-secondary dropdown-toggle btn-sm\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">
                                     <i class=\"fas fa-user-circle me-2\"></i>";
-            // line 22
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 22, $this->source); })()), "user", [], "any", false, false, false, 22), "firstname", [], "any", false, false, false, 22), "html", null, true);
+            // line 35
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 35, $this->source); })()), "user", [], "any", false, false, false, 35), "firstname", [], "any", false, false, false, 35), "html", null, true);
             echo " ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 22, $this->source); })()), "user", [], "any", false, false, false, 22), "lastname", [], "any", false, false, false, 22), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 35, $this->source); })()), "user", [], "any", false, false, false, 35), "lastname", [], "any", false, false, false, 35), "html", null, true);
             echo "
                                 </button>
                                 <ul class=\"dropdown-menu dropdown-menu-end\">
                                     <li><a class=\"dropdown-item\" href=\"#\"><i class=\"fas fa-user me-2\"></i>Profil</a></li>
                                     <li><hr class=\"dropdown-divider\"></li>
                                     <li><a class=\"dropdown-item\" href=\"";
-            // line 27
+            // line 40
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
             echo "\"><i class=\"fas fa-sign-out-alt me-2\"></i>Déconnexion</a></li>
                                 </ul>
                             </div>
                         ";
         } else {
-            // line 31
-            echo "                            <a class=\"btn btn-sm btn-warning text-white me-2\" type=\"button\" href=\"";
+            // line 44
+            echo "                            <div class=\"w-25 text-end\">
+                                <a class=\"btn btn-sm btn-outline-warning\" type=\"button\" href=\"";
+            // line 45
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
             echo "\">Connexion</a>
-                            <a class=\"btn btn-sm btn-outline-secondary\" type=\"button\" href=\"";
-            // line 32
+                                <a class=\"btn btn-sm me-3 btn-outline-secondary\" type=\"button\" href=\"";
+            // line 46
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("show_register");
             echo "\">Inscription</a>
+                            </div>
                         ";
         }
-        // line 34
-        echo "                    </form>
+        // line 49
+        echo "                    </div>
                 </nav>
                 <!-- / top bar -->
                 <!-- navbar -->
                 <nav class=\"navbar navbar-expand-lg navbar-light bg-white p-3 shadow-sm\">
                     <div class=\"container-fluid\">
                         <a class=\"navbar-brand\" href=\"";
-        // line 40
+        // line 55
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("show_home");
         echo "\">
-                            <img src=\"#\" alt=\"logo\" width=\"30\" height=\"24\">
+                            <span class=\"font-eras fs-3\">Cr<span class=\"font-viner\">y</span>chou</span>
                         </a>
                         <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
                             <span class=\"navbar-toggler-icon\"></span>
@@ -193,47 +224,47 @@ class __TwigTemplate_8a0eb94714a874e082f3eb166c1dd3188d0445386185c24a60503e0e8f2
                             <ul class=\"navbar-nav mx-auto mb-2 mb-lg-0 text-center\">
                                 <li class=\"nav-item px-2 mx-auto\">
                                     <a class=\"nav-link text-uppercase hvr-underline-reveal ";
-        // line 49
-        echo (((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 49, $this->source); })()), "request", [], "any", false, false, false, 49), "get", [0 => "_route"], "method", false, false, false, 49) == "show_home")) ? ("text-warning") : ("text-dark"));
+        // line 64
+        echo (((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 64, $this->source); })()), "request", [], "any", false, false, false, 64), "get", [0 => "_route"], "method", false, false, false, 64) == "show_home")) ? ("text-warning") : ("text-dark"));
         echo "\" href=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("show_home");
-        echo "\"><i class=\"far fa-user me-2\"></i>Biographie</a>
+        echo "\"><i class=\"far fa-user me-2\"></i>biographie</a>
                                 </li>
                                 <li class=\"nav-item px-2 mx-auto\">
                                     <a class=\"nav-link text-uppercase hvr-underline-reveal ";
-        // line 52
-        echo (((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 52, $this->source); })()), "request", [], "any", false, false, false, 52), "get", [0 => "_route"], "method", false, false, false, 52) == "show_gallery")) ? ("text-warning") : ("text-dark"));
+        // line 67
+        echo (((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 67, $this->source); })()), "request", [], "any", false, false, false, 67), "get", [0 => "_route"], "method", false, false, false, 67) == "show_gallery")) ? ("text-warning") : ("text-dark"));
         echo "\" href=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("show_gallery");
         echo "\"><i class=\"far fa-images me-2\"></i>œuvres</a>
                                 </li>
                                 <li class=\"nav-item px-2 mx-auto\">
-                                    <a class=\"nav-link text-uppercase hvr-underline-reveal text-dark\" href=\"#\"><i class=\"fas fa-shopping-cart me-2\"></i>Boutique</a>
+                                    <a class=\"nav-link text-uppercase hvr-underline-reveal text-dark\" href=\"#\"><i class=\"fas fa-shopping-cart me-2\"></i>boutique</a>
                                 </li>
                                 <li class=\"nav-item px-2 mx-auto\">
-                                    <a class=\"nav-link text-uppercase hvr-underline-reveal text-dark\" href=\"#\"><i class=\"far fa-newspaper me-2\"></i>Actualités</a>
+                                    <a class=\"nav-link text-uppercase hvr-underline-reveal text-dark\" href=\"#\"><i class=\"far fa-newspaper me-2\"></i>actualités</a>
                                 </li>
                                 <li class=\"nav-item px-2 mx-auto\">
                                     <a class=\"nav-link text-uppercase hvr-underline-reveal ";
-        // line 61
-        echo (((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 61, $this->source); })()), "request", [], "any", false, false, false, 61), "get", [0 => "_route"], "method", false, false, false, 61) == "show_contact")) ? ("text-warning") : ("text-dark"));
+        // line 76
+        echo (((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 76, $this->source); })()), "request", [], "any", false, false, false, 76), "get", [0 => "_route"], "method", false, false, false, 76) == "show_contact")) ? ("text-warning") : ("text-dark"));
         echo "\" href=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("show_contact");
-        echo "\"><i class=\"far fa-envelope me-2\"></i>Contact</a>
+        echo "\"><i class=\"far fa-envelope me-2\"></i>contact</a>
                                 </li>
                                 ";
-        // line 63
+        // line 78
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-            // line 64
+            // line 79
             echo "                                    <li class=\"nav-item px-2 mx-auto\">
                                         <a class=\"nav-link text-uppercase hvr-underline-reveal text-dark\" href=\"";
-            // line 65
+            // line 80
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("show_admin_home");
-            echo "\"><i class=\"fas fa-sliders-h me-2\"></i>Administration</a>
+            echo "\"><i class=\"fas fa-sliders-h me-2\"></i>administration</a>
                                     </li>
                                 ";
         }
-        // line 68
+        // line 83
         echo "                            </ul>
                             <button type=\"button\" class=\"btn btn-link position-relative link-dark\" data-bs-toggle=\"tooltip\" data-bs-placement=\"bottom\" title=\"Mon Panier\">
                                 <i class=\"fas fa-shopping-bag fa-lg\"></i><span class=\"position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning\">0</span>
@@ -243,22 +274,53 @@ class __TwigTemplate_8a0eb94714a874e082f3eb166c1dd3188d0445386185c24a60503e0e8f2
                 </nav>
                 <!-- / navbar -->
                 ";
-        // line 76
+        // line 91
         $this->displayBlock('content', $context, $blocks);
-        // line 77
+        // line 92
         echo "            </div>
-            <!-- / footer -->
-            <ul class=\"nav justify-content-center\">
-                <li class=\"nav-item\">
-                    <a class=\"nav-link text-secondary hvr-grow\" href=\"#\">Paiement</a>
-                </li>
-                <li class=\"nav-item\">
-                    <a class=\"nav-link text-secondary\">Crychou &#169; 2021 &#183; Tous droits réservés</a>
-                </li>
-                <li class=\"nav-item\">
-                    <a class=\"nav-link text-secondary hvr-grow\" href=\"#\">Mentions légales</a>
-                </li>
-            </ul>
+            <!-- footer -->
+            <footer class=\"bg-light pt-4\">
+                <div class=\"container\">
+                    <div class=\"row\">
+                        <div class=\"col-xs-12 col-sm-6 col-md-3\">
+                            <h5 class=\"mb-4\"><span class=\"font-eras fs-3\">Cr<span class=\"font-viner\">y</span>chou</span></h5>
+                            <p>About the company, little description will goes here.. </p>
+                        </div>
+                        <div class=\"col-xs-12 col-sm-6 col-md-3\">
+                            <h5 class=\"mb-4\">Informations</h5>
+                            <ul>
+                                <li><a href=\"#\" class=\"black-link\">Paiement</a></li>
+                                <li><a href=\"#\" class=\"black-link\">Livraison</a></li>
+                                <li><a href=\"#\" class=\"black-link\">Conditions générales</a></li>
+                                <li><a href=\"#\" class=\"black-link\">Mentions légales</a></li>
+                            </ul>
+                        </div>
+                        <div class=\"col-xs-12 col-sm-6 col-md-3\">
+                            <h5 class=\"mb-4\">Inscription</h5>
+                            <p>Get access to your full Training and Marketing Suite.</p>
+                            <a class=\"btn btn-outline-warning\" type=\"button\" href=\"";
+        // line 113
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("show_register");
+        echo "\">Inscription</a>
+                        </div>
+                        <div class=\"col-xs-12 col-sm-6 col-md-3\">
+                            <h5 class=\"mb-4\">Contact</h5>
+                            <ul class=\"list-unstyled\">
+                                <li><a href=\"mailto:contact@crychou.com\" class=\"black-link\"><i class=\"far fa-envelope me-2\"></i>contact@crychou.com</a></li>
+                                <li><a href=\"tel:+33624213748\" class=\"black-link\"> <i class=\"fas fa-phone me-2\"></i>+33 6 11 05 29 18</a></li>
+                                <li><a href=\"https://www.instagram.com/creationsbycecylbycrychou/\" target=\"_blank\" class=\"black-link\"><i class=\"fab fa-instagram me-2\"></i>creationsbycecylbycrychou</a></li>
+                            </ul>
+
+                    </div>
+                </div>
+                <div class=\"container mt-4\">
+                    <div class=\"row\">
+                        <div class=\"text-center\">
+                            <p>Copyright Crychou © 2021. Tous droits réservés.</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
             <!-- / footer -->
         ";
         
@@ -269,7 +331,7 @@ class __TwigTemplate_8a0eb94714a874e082f3eb166c1dd3188d0445386185c24a60503e0e8f2
 
     }
 
-    // line 76
+    // line 91
     public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -287,7 +349,7 @@ class __TwigTemplate_8a0eb94714a874e082f3eb166c1dd3188d0445386185c24a60503e0e8f2
 
     }
 
-    // line 93
+    // line 136
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -297,7 +359,7 @@ class __TwigTemplate_8a0eb94714a874e082f3eb166c1dd3188d0445386185c24a60503e0e8f2
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 94
+        // line 137
         echo "            ";
         echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackScriptTags("app");
         echo "
@@ -315,9 +377,14 @@ class __TwigTemplate_8a0eb94714a874e082f3eb166c1dd3188d0445386185c24a60503e0e8f2
         return "base.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  301 => 94,  291 => 93,  273 => 76,  249 => 77,  247 => 76,  237 => 68,  231 => 65,  228 => 64,  226 => 63,  219 => 61,  205 => 52,  197 => 49,  185 => 40,  177 => 34,  172 => 32,  167 => 31,  160 => 27,  150 => 22,  146 => 20,  144 => 19,  138 => 15,  128 => 14,  115 => 10,  105 => 9,  86 => 7,  74 => 96,  72 => 93,  69 => 92,  67 => 14,  63 => 12,  61 => 9,  56 => 7,  48 => 1,);
+        return array (  363 => 137,  353 => 136,  335 => 91,  303 => 113,  280 => 92,  278 => 91,  268 => 83,  262 => 80,  259 => 79,  257 => 78,  250 => 76,  236 => 67,  228 => 64,  216 => 55,  208 => 49,  202 => 46,  198 => 45,  195 => 44,  188 => 40,  178 => 35,  174 => 33,  172 => 32,  161 => 23,  151 => 22,  138 => 18,  128 => 17,  109 => 15,  97 => 139,  95 => 136,  92 => 135,  90 => 22,  86 => 20,  84 => 17,  79 => 15,  72 => 11,  68 => 10,  64 => 9,  60 => 8,  56 => 7,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -327,6 +394,14 @@ class __TwigTemplate_8a0eb94714a874e082f3eb166c1dd3188d0445386185c24a60503e0e8f2
     <head>
         <meta charset=\"UTF-8\">
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+
+        <link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"{{ asset('favicon/apple-touch-icon.png') }}\">
+        <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"{{ asset('favicon/favicon-32x32.png') }}\">
+        <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"{{ asset('favicon/favicon-16x16.png') }}\">
+        <link rel=\"manifest\" href=\"{{ asset('favicon/site.webmanifest') }}\">
+        <link rel=\"mask-icon\" href=\"{{ asset('favicon/safari-pinned-tab.svg') }}\" color=\"#ff6700\">
+        <meta name=\"msapplication-TileColor\" content=\"#da532c\">
+        <meta name=\"theme-color\" content=\"#ffffff\">
 
         <title>{% block title %}Crychou{% endblock %}</title>
 
@@ -339,7 +414,12 @@ class __TwigTemplate_8a0eb94714a874e082f3eb166c1dd3188d0445386185c24a60503e0e8f2
             <div class=\"min-vh-100\">
                 <!-- top bar -->
                 <nav class=\"navbar navbar-light bg-light\">
-                    <form class=\"container-fluid justify-content-end\">
+                    <div class=\"w-100 d-flex justify-content-between align-items-center\">
+                        <div class=\"w-25\"></div>
+                        <div class=\"w-25 text-center\">
+                            <a href=\"mailto:contact@crychou.com\" class=\"link-secondary text-decoration-none btn-sm\"><i class=\"far fa-envelope me-2\"></i>contact@crychou.com</a>
+                            <a href=\"tel:+33624213748\" class=\"link-secondary text-decoration-none btn-sm\"><i class=\"fas fa-phone me-2\"></i>+33 6 11 05 29 18</a>
+                        </div>
                         {% if app.user %}
                             <div class=\"btn-group\">
                                 <button type=\"button\" class=\"btn btn-outline-secondary dropdown-toggle btn-sm\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">
@@ -352,17 +432,19 @@ class __TwigTemplate_8a0eb94714a874e082f3eb166c1dd3188d0445386185c24a60503e0e8f2
                                 </ul>
                             </div>
                         {% else %}
-                            <a class=\"btn btn-sm btn-warning text-white me-2\" type=\"button\" href=\"{{ path('app_login') }}\">Connexion</a>
-                            <a class=\"btn btn-sm btn-outline-secondary\" type=\"button\" href=\"{{ path('show_register') }}\">Inscription</a>
+                            <div class=\"w-25 text-end\">
+                                <a class=\"btn btn-sm btn-outline-warning\" type=\"button\" href=\"{{ path('app_login') }}\">Connexion</a>
+                                <a class=\"btn btn-sm me-3 btn-outline-secondary\" type=\"button\" href=\"{{ path('show_register') }}\">Inscription</a>
+                            </div>
                         {% endif %}
-                    </form>
+                    </div>
                 </nav>
                 <!-- / top bar -->
                 <!-- navbar -->
                 <nav class=\"navbar navbar-expand-lg navbar-light bg-white p-3 shadow-sm\">
                     <div class=\"container-fluid\">
                         <a class=\"navbar-brand\" href=\"{{ path('show_home') }}\">
-                            <img src=\"#\" alt=\"logo\" width=\"30\" height=\"24\">
+                            <span class=\"font-eras fs-3\">Cr<span class=\"font-viner\">y</span>chou</span>
                         </a>
                         <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
                             <span class=\"navbar-toggler-icon\"></span>
@@ -370,23 +452,23 @@ class __TwigTemplate_8a0eb94714a874e082f3eb166c1dd3188d0445386185c24a60503e0e8f2
                         <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
                             <ul class=\"navbar-nav mx-auto mb-2 mb-lg-0 text-center\">
                                 <li class=\"nav-item px-2 mx-auto\">
-                                    <a class=\"nav-link text-uppercase hvr-underline-reveal {{ app.request.get('_route') == 'show_home' ? 'text-warning' : 'text-dark' }}\" href=\"{{ path('show_home') }}\"><i class=\"far fa-user me-2\"></i>Biographie</a>
+                                    <a class=\"nav-link text-uppercase hvr-underline-reveal {{ app.request.get('_route') == 'show_home' ? 'text-warning' : 'text-dark' }}\" href=\"{{ path('show_home') }}\"><i class=\"far fa-user me-2\"></i>biographie</a>
                                 </li>
                                 <li class=\"nav-item px-2 mx-auto\">
                                     <a class=\"nav-link text-uppercase hvr-underline-reveal {{ app.request.get('_route') == 'show_gallery' ? 'text-warning' : 'text-dark' }}\" href=\"{{ path('show_gallery') }}\"><i class=\"far fa-images me-2\"></i>œuvres</a>
                                 </li>
                                 <li class=\"nav-item px-2 mx-auto\">
-                                    <a class=\"nav-link text-uppercase hvr-underline-reveal text-dark\" href=\"#\"><i class=\"fas fa-shopping-cart me-2\"></i>Boutique</a>
+                                    <a class=\"nav-link text-uppercase hvr-underline-reveal text-dark\" href=\"#\"><i class=\"fas fa-shopping-cart me-2\"></i>boutique</a>
                                 </li>
                                 <li class=\"nav-item px-2 mx-auto\">
-                                    <a class=\"nav-link text-uppercase hvr-underline-reveal text-dark\" href=\"#\"><i class=\"far fa-newspaper me-2\"></i>Actualités</a>
+                                    <a class=\"nav-link text-uppercase hvr-underline-reveal text-dark\" href=\"#\"><i class=\"far fa-newspaper me-2\"></i>actualités</a>
                                 </li>
                                 <li class=\"nav-item px-2 mx-auto\">
-                                    <a class=\"nav-link text-uppercase hvr-underline-reveal {{ app.request.get('_route') == 'show_contact' ? 'text-warning' : 'text-dark' }}\" href=\"{{ path('show_contact') }}\"><i class=\"far fa-envelope me-2\"></i>Contact</a>
+                                    <a class=\"nav-link text-uppercase hvr-underline-reveal {{ app.request.get('_route') == 'show_contact' ? 'text-warning' : 'text-dark' }}\" href=\"{{ path('show_contact') }}\"><i class=\"far fa-envelope me-2\"></i>contact</a>
                                 </li>
                                 {% if is_granted('ROLE_ADMIN') %}
                                     <li class=\"nav-item px-2 mx-auto\">
-                                        <a class=\"nav-link text-uppercase hvr-underline-reveal text-dark\" href=\"{{ path('show_admin_home') }}\"><i class=\"fas fa-sliders-h me-2\"></i>Administration</a>
+                                        <a class=\"nav-link text-uppercase hvr-underline-reveal text-dark\" href=\"{{ path('show_admin_home') }}\"><i class=\"fas fa-sliders-h me-2\"></i>administration</a>
                                     </li>
                                 {% endif %}
                             </ul>
@@ -399,18 +481,46 @@ class __TwigTemplate_8a0eb94714a874e082f3eb166c1dd3188d0445386185c24a60503e0e8f2
                 <!-- / navbar -->
                 {% block content %}{% endblock %}
             </div>
-            <!-- / footer -->
-            <ul class=\"nav justify-content-center\">
-                <li class=\"nav-item\">
-                    <a class=\"nav-link text-secondary hvr-grow\" href=\"#\">Paiement</a>
-                </li>
-                <li class=\"nav-item\">
-                    <a class=\"nav-link text-secondary\">Crychou &#169; 2021 &#183; Tous droits réservés</a>
-                </li>
-                <li class=\"nav-item\">
-                    <a class=\"nav-link text-secondary hvr-grow\" href=\"#\">Mentions légales</a>
-                </li>
-            </ul>
+            <!-- footer -->
+            <footer class=\"bg-light pt-4\">
+                <div class=\"container\">
+                    <div class=\"row\">
+                        <div class=\"col-xs-12 col-sm-6 col-md-3\">
+                            <h5 class=\"mb-4\"><span class=\"font-eras fs-3\">Cr<span class=\"font-viner\">y</span>chou</span></h5>
+                            <p>About the company, little description will goes here.. </p>
+                        </div>
+                        <div class=\"col-xs-12 col-sm-6 col-md-3\">
+                            <h5 class=\"mb-4\">Informations</h5>
+                            <ul>
+                                <li><a href=\"#\" class=\"black-link\">Paiement</a></li>
+                                <li><a href=\"#\" class=\"black-link\">Livraison</a></li>
+                                <li><a href=\"#\" class=\"black-link\">Conditions générales</a></li>
+                                <li><a href=\"#\" class=\"black-link\">Mentions légales</a></li>
+                            </ul>
+                        </div>
+                        <div class=\"col-xs-12 col-sm-6 col-md-3\">
+                            <h5 class=\"mb-4\">Inscription</h5>
+                            <p>Get access to your full Training and Marketing Suite.</p>
+                            <a class=\"btn btn-outline-warning\" type=\"button\" href=\"{{ path('show_register') }}\">Inscription</a>
+                        </div>
+                        <div class=\"col-xs-12 col-sm-6 col-md-3\">
+                            <h5 class=\"mb-4\">Contact</h5>
+                            <ul class=\"list-unstyled\">
+                                <li><a href=\"mailto:contact@crychou.com\" class=\"black-link\"><i class=\"far fa-envelope me-2\"></i>contact@crychou.com</a></li>
+                                <li><a href=\"tel:+33624213748\" class=\"black-link\"> <i class=\"fas fa-phone me-2\"></i>+33 6 11 05 29 18</a></li>
+                                <li><a href=\"https://www.instagram.com/creationsbycecylbycrychou/\" target=\"_blank\" class=\"black-link\"><i class=\"fab fa-instagram me-2\"></i>creationsbycecylbycrychou</a></li>
+                            </ul>
+
+                    </div>
+                </div>
+                <div class=\"container mt-4\">
+                    <div class=\"row\">
+                        <div class=\"text-center\">
+                            <p>Copyright Crychou © 2021. Tous droits réservés.</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
             <!-- / footer -->
         {% endblock %}
 

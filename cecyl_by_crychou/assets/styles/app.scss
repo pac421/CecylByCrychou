@@ -5,6 +5,24 @@ $warning: $orange;
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "../../node_modules/hover.css/css/hover-min.css";
 
+@font-face {
+  font-family: 'eras';
+  src: url('../fonts/ErasLightITC.ttf') format('truetype');
+}
+.font-eras {
+  font-family: 'eras', serif;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'viner';
+  src: url('../fonts/VINERITC.ttf') format('truetype');
+}
+.font-viner {
+  font-family: 'viner', serif;
+  color: $orange;
+}
+
 body {
 
 }
@@ -21,4 +39,8 @@ body {
 .black-link:hover {
   color: #212529;
   text-decoration: underline;
+}
+
+.btn-outline-warning:hover {
+  color: #ffffff;
 }
